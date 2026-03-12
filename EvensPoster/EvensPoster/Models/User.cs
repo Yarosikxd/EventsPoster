@@ -30,6 +30,5 @@ namespace EvensPoster.Models
         public List<EventParticipant>? EventParticipants { get; set; }
         public List<EventSponsor>? EventSponsors { get; set; }
         public List<EventVisitor>? EventVisitors { get; set; }
-
     }
 }
