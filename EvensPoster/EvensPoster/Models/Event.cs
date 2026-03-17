@@ -22,8 +22,8 @@ namespace EvensPoster.Models
         public bool IsFinished { get; set; }
 
         // Організатор
-        public int OrganizerId { get; set; }
-        public User Organizer { get; set; }
+        public int? OrganizerId { get; set; }
+        public User? Organizer { get; set; }
 
 
         // Зв’язки

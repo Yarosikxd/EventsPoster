@@ -1,0 +1,32 @@
+﻿@model IEnumerable<EvensPoster.Models.Event>
+
+<div class="container">
+    <h2 class="my-4">Список усіх подій</h2>
+    <a asp-action="Create" class="btn btn-primary mb-4">Створити нову подію</a>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <!-- Виводимо фото за посиланням URL -->
+                    <img src="@item.ImageURL" class="card-img-top" alt="Poster" style="height: 200px; object-fit: cover;"
+                         onerror="this.src='https://via.placeholder.com'">
+
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Title</h5>
+                        <p class="card-text text-muted">
+                            <i class="bi bi-geo-alt"></i> @item.City <br />
+                            <i class="bi bi-calendar"></i> @item.Date.ToString("dd.MM.yyyy HH:mm")
+                        </p>
+                        <p class="fw-bold text-success">Ціна: @item.Price грн</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <p class="small text-truncate">@item.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

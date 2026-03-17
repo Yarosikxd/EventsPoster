@@ -46,7 +46,7 @@ namespace EvensPoster.Controllers
                     Price = model.Price,
                     ImageURL = model.ImageUrl, // Записуємо URL як рядок
                     IsFinished = false,
-                    OrganizerId = 1 // Тимчасове значення, поки немає авторизації
+                    OrganizerId = null // Тимчасове значення, поки немає авторизації
                 };
 
                 _context.Events.Add(newEvent);
